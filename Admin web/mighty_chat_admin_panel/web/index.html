@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-messaging.js"></script>
+
+    <base href="/">
+
+    <meta charset="UTF-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="description" content="A new Flutter project.">
+
+    <!-- iOS meta tags & icons -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="mighty-chat-app">
+    <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png"/>
+    <script type="text/javascript">
+    window.flutterWebRenderer="html";
+
+    </script>
+
+    <title>Mighty Chat - Admin Panel</title>
+    <link rel="manifest" href="manifest.json">
+
+</head>
+<body>
+
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-messaging.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-storage.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+ // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyA5T0-lYhRuTkw99b7JLGCKwPOf_nZ7oJ8",
+  authDomain: "mighty-chat-app.firebaseapp.com",
+  databaseURL: "https://mighty-chat-app-default-rtdb.firebaseio.com",
+  projectId: "mighty-chat-app",
+  storageBucket: "mighty-chat-app.appspot.com",
+  messagingSenderId: "983996196721",
+  appId: "1:983996196721:web:41cd288eea69e37c4ef8d0",
+  measurementId: "G-55ZXS1T4Y8"
+};
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+
+
+
+
+
+
+</script>
+<script src="main.dart.js" type="application/javascript"></script>
+<script>
+  if ("serviceWorker" in navigator) {
+      window.addEventListener("load", function () {
+
+        navigator.serviceWorker.register('/firebase-messaging-sw.js', { scope: './'}).then(function(registration) {
+          messaging.useServiceWorker(registration);
+          console.log('Service firebase worker registration succeeded:', registration);
+        }, function(error) {
+          console.log('Service firebase worker registration failed:', error);
+        });
+      });
+    }
+
+window.onload = function () {
+setTimeout(function () {
+var loadingIndicator = document.getElementById("loading_indicator");
+if (loadingIndicator) {
+loadingIndicator.remove();
+}
+}, 10000);
+};
+
+
+</script>
+
+
+
+</body>
+</html>

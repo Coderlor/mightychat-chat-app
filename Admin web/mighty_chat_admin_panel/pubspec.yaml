@@ -1,0 +1,53 @@
+name: mighty_chat_admin_panel
+description: A new Flutter project.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+version: 1.0.1
+
+environment:
+  sdk: ">=3.1.2 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.6
+  nb_utils: ^6.1.0
+  google_fonts: ^6.1.0
+  intl: ^0.19.0
+
+  #STATE MANAGEMENT TECHNIQUE
+  mobx: ^2.3.0+1
+  flutter_mobx: ^2.2.0+2
+
+  #FIREBASE
+  firebase_core: ^2.24.2
+  firebase_auth: ^4.16.0
+  cloud_firestore: ^4.14.0
+  firebase_storage: ^11.6.0
+  paginate_firestore: ^1.0.3+1
+
+  #OTHERS
+  cached_network_image: ^3.3.1
+  http: ^1.1.2
+  url_launcher: ^6.2.2
+  url_strategy: ^0.2.0
+  file_picker: ^6.1.1
+  image_picker: ^1.0.6
+  flutter_colorpicker: ^1.0.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  build_runner: ^2.4.7
+  mobx_codegen: ^2.6.0+1
+  #flutter packages pub run build_runner build --delete-conflicting-outputs
+
+dependency_overrides:
+  cloud_firestore: ^4.14.0
+  http: ^1.1.2
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - images/
